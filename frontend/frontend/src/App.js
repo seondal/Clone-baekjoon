@@ -1,7 +1,14 @@
+import React from "react";
+import Header from "./Header.js";
+import Imgslide from "./Imgslide.js";
+import Numsummary from "./Numsummary.js";
+
 function App() {
   return (
     <div>
-      <p>프론트 클론 페이지</p>
+      <Header />
+      <Imgslide />
+      <Numsummary />
     </div>
   );
 }
