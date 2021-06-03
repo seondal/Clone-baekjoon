@@ -4,5 +4,7 @@ import lombok.Getter;
 
 @Getter
 public class ProblemListResponseDto {
+    private Long id;
+    private String title;
 
 }
