@@ -19,4 +19,5 @@ public class ProblemResponseDto {
         this.input_condition = entity.getInput_condition();
         this.output_condition = entity.getOutput_condition();
     }
+
 }
