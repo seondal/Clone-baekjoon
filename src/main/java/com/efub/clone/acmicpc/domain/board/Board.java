@@ -34,13 +34,15 @@ public class Board extends BaseTimeEntity {
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "writer")
+    @JoinColumn(name = "writer", nullable = false)
     private User user;
 
     @Builder
-    private Board(String title, String category, String content){
+    private Board(String title, Problem problem, String category, User user, String content){
         this.title = title;
+        this.problem = problem;
         this.category = category;
+        this.user = user;
         this.content = content;
     }
 }
