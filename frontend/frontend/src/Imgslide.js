@@ -7,13 +7,15 @@ const Welcome = styled.div`
 
 function Imgslide() {
     const imgstyle = {
-        width: '100%',
+        width:'1170px',
         height: '60vh',
         objectFit: 'cover',
-        filter: 'brightness(0.8'
+        filter: 'brightness(0.8',
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
     return (
-        <div>
+        <div style={{textAlign:'center'}}>
             <img style={imgstyle} src="https://d2gd6pc034wcta.cloudfront.net/contest/42/e04ed392bc207f9f89d461842d85aa8006b607b1.jpg"></img>
             <Welcome>
                 <h2>Baekjoon Online Judge</h2>

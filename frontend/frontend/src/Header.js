@@ -12,13 +12,13 @@ const Logo = styled.div`
 const Menu = styled.li`
     list-style: none;
     display: table-cell;
+    width:10vw;
     text-align: center;
-    width: 10vw;
 `
 
 function Header() {
     return (
-        <ul class="header">
+        <ul style={{maxWidth:'1170px', marginLeft:'auto',marginRight:'auto'}}>
             <Menu><Logo/></Menu>
             <Menu>문제</Menu>
             <Menu>문제집</Menu>
