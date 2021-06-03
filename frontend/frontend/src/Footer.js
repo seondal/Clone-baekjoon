@@ -41,6 +41,14 @@ const Copyright = styled.div`
     display: flex;
     flex-direction: column;
     padding-left:310px;
+    a:link{
+        color: var(--text);
+        text-decoration: none;
+    }
+    a:visited{
+        color: var(--text);
+        text-decoration: none;
+    }
     a:hover{
         color: var(--text);
         text-decoration : underline;
