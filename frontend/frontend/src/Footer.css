@@ -1,3 +1,4 @@
+
 :root {
     --bigtext : #FFFFFF;
     --text : #BBBBBB;
@@ -5,6 +6,7 @@
 
 
 a:link {
+    font-size: 13px;
     color: var(--text);
     text-decoration: none;
 }

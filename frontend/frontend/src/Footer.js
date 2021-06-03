@@ -6,15 +6,17 @@ const FooterWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-content: flex-end;
-    justify-content : center;
     background: #252525;
+    padding: 40px;
+    justify-content: center;
 `
 
 const FooterContent = styled.div`
     display : flex;
     padding-top : 30px;
     flex-direction: column;
-    width: 400px;
+    width: 292.5px;
+    padding: 15px;
 `
 
 function Footer() {
