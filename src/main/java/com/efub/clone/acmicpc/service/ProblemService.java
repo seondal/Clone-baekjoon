@@ -26,7 +26,7 @@ public class ProblemService {
 
     @Transactional(readOnly = true)
     public List<ProblemListResponseDto> findAllSortByRank(Long rank){
-        return problemRepository.findAll(Sort.by(Sort.Direction.ASC,rank)).stream()
+        return problemRepository.findAll(Sort.by(String.valueOf(rank))).stream()
                 .map(ProblemListResponseDto::new)
                 .collect(Collectors.toList());
     }
