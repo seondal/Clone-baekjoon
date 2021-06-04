@@ -3,23 +3,24 @@ import axios from "axios";
 import {useState, useEffect} from "react";
 import active from "./assets/active.png";
 import notactive from "./assets/notactive.png";
+import styled from "styled-components";
 
-const Wrapper = styled.div `
-display: flex;
-flex-direction: row;
-justify-content: center;
-font-size: 13px;
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 13px;
 `
 
 const Context = styled.div `
-display: flex;
-flex-direction: column;
-padding:15px;
+    display: flex;
+    flex-direction: column;
+    padding:15px;
 `
 
 const Title = styled.div`
-border-bottom: 1px;
-border-bottom-color: var(--point);
+    border-bottom: 1px;
+    border-bottom-color: var(--point);
 
 a:link{
     color : var(--content);
