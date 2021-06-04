@@ -19,20 +19,16 @@ public class HomeController {
     public final BoardService boardService;
     public final ProblemService problemService;
 
-    @GetMapping
-    @RequestMapping(value = "/")
+    @GetMapping("/home1")
     public List<BoardListResponseDto> board_findAllDesc() { return boardService.findAllDesc(); }
 
-    @GetMapping
-    @RequestMapping(value = "/")
+    @GetMapping("/home2")
     public List<ProblemListResponseDto> problem_findAllDesc() { return problemService.findAllDesc(); }
 
-    @GetMapping
-    @RequestMapping(value = "/")
+    @GetMapping("/home3")
     public List<ProblemListResponseDto> findMultilingual() { return problemService.findMultilingualDesc(); }
 
-    @GetMapping
-    @RequestMapping(value = "/")
+    @GetMapping("/home4")
     public List<ProblemListResponseDto> findAllSortByRank(){
         return problemService.findAllSortByRank();
     }
