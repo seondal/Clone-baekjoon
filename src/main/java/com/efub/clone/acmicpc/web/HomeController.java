@@ -30,8 +30,8 @@ public class HomeController {
     public List<ProblemListResponseDto> findMultilingual() { return problemService.findMultilingualDesc(); }
 
     @GetMapping
-    public List<ProblemListResponseDto> findAllDesc(@PathVariable Long rank){
-        return problemService.findAllDesc();
+    public List<ProblemListResponseDto> findAllSortByRank(){
+        return problemService.findAllSortByRank();
     }
 
 
