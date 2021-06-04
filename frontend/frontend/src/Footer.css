@@ -1,19 +1,7 @@
+
 :root {
     --bigtext : #FFFFFF;
     --text : #BBBBBB;
-}
-
-
-a:link {
-    color: var(--text);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--text);
-}
-
-a:hover {
-    color: #1270C0;
-    text-decoration: underline; 
+    --content : #585f69;
+    --point : #0076C0;
 }
