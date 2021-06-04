@@ -48,9 +48,13 @@ img{
 
 
 function Header() {
-    const url = 'http://localhost:8080/problem/sort/rank';
+    const url1 = 'http://localhost:8080/problem/sort/rank';
+    const url2 = 'http://localhost:8080/home1';
 
-    axios.get(url).then(response=>{
+    axios.get(url1).then(response=>{
+        console.log(response.data);
+    });
+    axios.get(url2).then(response=>{
         console.log(response.data);
     });
 
