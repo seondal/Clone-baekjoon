@@ -26,14 +26,6 @@ create table problems (
                           primary key (problem_id)
 ) engine=InnoDB;
 
-create table status (
-                        status_no bigint not null auto_increment,
-                        solve_flag bit not null default false,
-                        problem_id bigint not null,
-                        user_id varchar(20) not null,
-                        primary key (status_no)
-) engine=InnoDB;
-
 create table users (
                        user_id varchar(20) not null,
                        create_date datetime(6),
