@@ -19,7 +19,7 @@ create table problems (
                           create_date datetime(6),
                           problem_content TEXT not null,
                           input_condition TEXT not null,
-                          multilingual_flag bit not null,
+                          multilingual_flag bit not null default false,
                           output_condition TEXT not null,
                           problem_rank bigint not null,
                           problem_title varchar(255) not null,
@@ -28,7 +28,7 @@ create table problems (
 
 create table status (
                         status_no bigint not null auto_increment,
-                        solve_flag bit not null,
+                        solve_flag bit not null default false,
                         problem_id bigint,
                         user_id varchar(20),
                         primary key (status_no)
@@ -38,7 +38,7 @@ create table users (
                        user_id varchar(20) not null,
                        create_date datetime(6),
                        introduce varchar(255),
-                       admin_flag bit not null,
+                       admin_flag bit not null default false,
                        password varchar(20) not null,
                        user_rank bigint not null,
                        primary key (user_id)
