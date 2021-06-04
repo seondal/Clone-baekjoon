@@ -7,6 +7,6 @@ insert into users(user_id, create_date, introduce, admin_flag, password, user_ra
 
 insert into problems(problem_id, problem_title, problem_content, input_condition, output_condition) values (d,d,d,d,d);
 
-insert into status() values ();
+insert into status(user_id, problem_id, solved) values (d, d, d);
 
-insert into board() values ();
+insert into board(board_id, board_title, problem_id, category, writer, board_content) values (d,d,d,d,d,d);
