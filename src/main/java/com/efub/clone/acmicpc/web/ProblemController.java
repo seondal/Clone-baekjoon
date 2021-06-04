@@ -27,8 +27,8 @@ public class ProblemController {
     }
 
     @GetMapping("/problem/sort/{sort_by}")
-    public List<ProblemListResponseDto> findAllBy(@PathVariable String sort_by){
-        return problemService.findAllBy(sort_by);
+    public List<ProblemListResponseDto> findAllSortByRank(){
+        return problemService.findAllSortByRank();
     }
 
     @GetMapping("/problem/added/1")
