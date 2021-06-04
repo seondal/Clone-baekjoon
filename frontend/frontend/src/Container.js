@@ -6,12 +6,13 @@ import active from "./assets/blue.png";
 import notactive from "./assets/gray.png";
 
 const Wrapper = styled.div`
+font-size: 13px;
 padding-top:40px;
 padding-bottom: 40px;
 display: flex;
 flex-direction: row;
 justify-content: center;
-font-size: 13px;
+
 a:link{
     color : var(--content);
     text-decoration: none;
@@ -129,7 +130,7 @@ function Container() {
             </Context>
 
             <Context>
-                <Title><h2><a href="">새로운 글</a></h2></Title>
+                <Title><h2><a href="">추가된 문제</a></h2></Title>
                 <Card>
                     <a href="">21925번 짝수 팰린드롬</a>
                     <div class="triangle"></div>
@@ -162,7 +163,7 @@ function Container() {
             </Context>
 
             <Context>
-                <Title><h2><a href="">새로운 글</a></h2></Title>
+                <Title><h2><a href="">추가된 영어 문제</a></h2></Title>
                 <Card>
                     <a href="">21925번 짝수 팰린드롬</a>
                     <div class="triangle"></div>
@@ -195,7 +196,7 @@ function Container() {
             </Context>
 
             <Context>
-                <Title><h2><a href="">새로운 글</a></h2></Title>
+                <Title><h2><a href="">문제 순위</a></h2></Title>
                 <Card>
                     <a href="">21925번 짝수 팰린드롬</a>
                     <div class="triangle"></div>
