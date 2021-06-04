@@ -21,10 +21,10 @@ class UserRepositoryTest {
     @Autowired
     UserRepository userRepository;
 
-    @AfterEach
-    public void tearDown(){
-        userRepository.deleteAll();
-    }
+//    @AfterEach
+//    public void tearDown(){
+//        userRepository.deleteAll();
+//    }
 
     @Test
     public void 데이터주입테스트(){
