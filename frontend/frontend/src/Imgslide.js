@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Welcome = styled.div`
     text-align:center;
     margin-top:60px;
+    margin-bottom:60px;
     color:#555;
 `
 

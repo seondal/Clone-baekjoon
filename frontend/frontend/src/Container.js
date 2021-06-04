@@ -1,18 +1,14 @@
 import React from "react";
-import styled from "styled-components";
 import axios from "axios";
 import {useState, useEffect} from "react";
 
 function Header() {
-    //const [data, setData] = useState();
+    const [data, setData] = useState();
 
-    //useEffect(async() =>{
-		//try {
-            //const response = await axios.get(`http://localhost:8080`);
-            //setData(response.data);
-            //console.log(response);
-        //}
-	//},[]);
+    const url = 'http://localhost:8080';
+    axios.get(url).then(response=>{
+        console.log(response.data);
+    })
 
     return (
         <div>
