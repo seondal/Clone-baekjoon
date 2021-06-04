@@ -18,7 +18,6 @@ import java.util.List;
 @Table(name="problems")
 public class Problem extends BaseTimeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "problem_id", nullable = false)
     private Long id;
 

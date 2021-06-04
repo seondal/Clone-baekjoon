@@ -26,7 +26,7 @@ public class ProblemController {
         return problemService.findAllDesc();
     }
 
-    @GetMapping("/problem/sort/{sort_by}")
+    @GetMapping("/problem/sort/rank")
     public List<ProblemListResponseDto> findAllSortByRank(){
         return problemService.findAllSortByRank();
     }

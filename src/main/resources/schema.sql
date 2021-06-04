@@ -15,7 +15,7 @@ create table boards (
 ) engine=InnoDB;
 
 create table problems (
-                          problem_id bigint not null auto_increment,
+                          problem_id bigint not null,
                           create_date datetime(6),
                           problem_content TEXT not null,
                           input_condition TEXT not null,
@@ -29,8 +29,8 @@ create table problems (
 create table status (
                         status_no bigint not null auto_increment,
                         solve_flag bit not null default false,
-                        problem_id bigint,
-                        user_id varchar(20),
+                        problem_id bigint not null,
+                        user_id varchar(20) not null,
                         primary key (status_no)
 ) engine=InnoDB;
 

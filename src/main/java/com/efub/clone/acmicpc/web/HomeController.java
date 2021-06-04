@@ -33,6 +33,4 @@ public class HomeController {
         return problemService.findAllSortByRank();
     }
 
-
-
 }

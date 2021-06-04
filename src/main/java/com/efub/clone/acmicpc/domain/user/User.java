@@ -29,8 +29,6 @@ public class User extends BaseTimeEntity {
     @Builder.Default
     private boolean isAdmin = false;
 
-    private Long solveNum;
-
     @Builder
     public User(String id, String password, String introduce, Long rank, boolean isAdmin){
         this.id = id;
@@ -38,9 +36,5 @@ public class User extends BaseTimeEntity {
         this.introduce = introduce;
         this.rank = rank;
         this.isAdmin = isAdmin;
-    }
-
-    public void setSolveNum(Long solveNum) {
-        this.solveNum = solveNum;
     }
 }
