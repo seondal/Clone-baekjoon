@@ -121,7 +121,7 @@ function Container() {
     const [engData, setEngdata] = useState();
     useEffect(async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/problem/2`);
+            const response = await axios.get(`http://localhost:8080/problem/added/1`);
             setEngdata(response.data); //데이터 저장
         } catch (e) {
             console.log("error");
@@ -137,7 +137,7 @@ function Container() {
                     if (i < 5)
                         return (
                             <Card>
-                                <a href="">
+                                <a href="" style={{color:'#0076C0'}}>
                                     @{item.user.id}
                                 </a>
                                 <a> {item.title}</a>
