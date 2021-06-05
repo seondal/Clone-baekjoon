@@ -8,11 +8,13 @@ const Wrapper = styled.div`
     align-content: flex-end;
     background: #252525;
     font-size: 13px;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 15px;
 `
 const FooterWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    padding: 40px;
     justify-content: center;
 `
 
@@ -20,8 +22,7 @@ const FooterContent = styled.div`
     display : flex;
     padding-top : 30px;
     flex-direction: column;
-    width: 292.5px;
-    padding: 15px;
+    width: 293px;
     a {
         margin : 1px;
     }
@@ -40,7 +41,7 @@ const FooterContent = styled.div`
 const Copyright = styled.div`
     display: flex;
     flex-direction: column;
-    padding-left:310px;
+    padding-top: 70px;
     a:link{
         color: var(--text);
         text-decoration: none;
