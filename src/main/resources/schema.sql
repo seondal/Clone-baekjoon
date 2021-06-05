@@ -45,13 +45,3 @@ alter table boards
     add constraint FK3faq5fnym59tvtcrmikt3mclc
         foreign key (writer)
             references users (user_id);
-
-alter table status
-    add constraint FKs4ex7d6benl8msdgw32np5617
-        foreign key (problem_id)
-            references problems (problem_id);
-
-alter table status
-    add constraint FK41pnbjmhlw8pvggq86inm7le
-        foreign key (user_id)
-            references users (user_id);
