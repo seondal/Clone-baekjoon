@@ -18,6 +18,14 @@ const Menu = styled.li`
     text-align: center;
     font-size:15px;
     color: gray;
+    padding-bottom: 12px;
+
+    :hover{
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    border-color: var(--point);
+    color: #0076C0;
+    }
 `
 
 function Header() {
