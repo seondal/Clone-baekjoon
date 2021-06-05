@@ -160,7 +160,7 @@ function Footer() {
                 <p>제작일: 2021-06-14</p>
                 <p>주소: 서울특별시 서대문구 이화여대길 52</p>
                 <p>만든이: EFUB 6팀</p>
-                <p>팀원: 김선영 김은지 박현아</p>
+                <p>팀원: 김선영 김은지 박현아 서수경</p>
                 <p>깃허브: <a href="https://github.com/EFUB-6team">https://github.com/EFUB-6team</a></p>
                 <p>통신판매신고 : 안했음</p>
                 
