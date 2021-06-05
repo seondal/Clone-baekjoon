@@ -18,7 +18,6 @@ import java.util.List;
 @Table(name="problems")
 public class Problem extends BaseTimeEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "problem_id", nullable = false)
     private Long id;
 
@@ -37,12 +36,16 @@ public class Problem extends BaseTimeEntity {
     @Column(name = "multilingual_flag", nullable = false)
     private boolean isMultilingual = false;
 
+    @Column(name = "problem_rank", nullable = false)
+    private Long rank;
+
     @Builder
-    public Problem(String title, String content, String input_condition, String output_condition, boolean isMultilingual){
+    public Problem(String title, String content, String input_condition, String output_condition, boolean isMultilingual, Long rank){
         this.title = title;
         this.content = content;
         this.input_condition = input_condition;
         this.output_condition = output_condition;
         this.isMultilingual = isMultilingual;
+        this.rank = rank;
     }
 }
