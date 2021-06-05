@@ -41,6 +41,7 @@ const FooterContent = styled.div`
 const Copyright = styled.div`
     display: flex;
     flex-direction: column;
+    margin-left: 300px;
     padding-top: 70px;
     a:link{
         color: var(--text);
