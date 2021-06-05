@@ -50,11 +50,13 @@ width:255px;
 height: auto;
 padding-top: 10px;
 padding-left: 10px;
+padding-bottom: 0px;
 margin-bottom: 10px;
 background-color : #F7F7F7;
 flex-wrap: wrap;
 
 a {
+display: inline;
 color: #333333;
 text-decoration: none;
     :hover {
@@ -78,7 +80,6 @@ margin-left: 240px;
     background : url(${active});
     background-size : 100%;
     }
-    
 } 
 `
 
@@ -94,115 +95,101 @@ function Container() {
         }
     }, []);
 
+    //새로운글
+    const [boardData, setBoarddata] = useState();
+    useEffect(async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/board/list/all`);
+            setBoarddata(response.data); //데이터 저장
+        } catch (e) {
+            console.log("error");
+        }
+    }, []);
+
+    //추가된 문제
+    const [addedData, setAddeddata] = useState();
+    useEffect(async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/problem/added`);
+            setAddeddata(response.data); //데이터 저장
+        } catch (e) {
+            console.log("error");
+        }
+    }, []);
+
+    //추가된 영어 문제
+    const [engData, setEngdata] = useState();
+    useEffect(async () => {
+        try {
+            const response = await axios.get(`http://localhost:8080/problem/2`);
+            setEngdata(response.data); //데이터 저장
+        } catch (e) {
+            console.log("error");
+        }
+    }, []);
+
     return (
 
         <Wrapper>
             <Context>
-            <Title><h2><a href="">새로운 글</a></h2></Title>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
+                <Title><h2><a href="">새로운 글</a></h2></Title>
+                {boardData?.map((item, i) => {
+                    if (i < 5)
+                        return (
+                            <Card>
+                                <a href="">
+                                    @{item.user.id}
+                                </a>
+                                <a> {item.title}</a>
+                                <div class="triangle"></div>
+                            </Card>
+                        )
+                }
+                )}
             </Context>
 
             <Context>
-            <Title><h2><a href="">새로운 글</a></h2></Title>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
+                <Title><h2><a href="">추가된 문제</a></h2></Title>
+                {addedData?.map((item, i) => {
+                    if (i < 7)
+                        return (
+                            <Card>
+                                <a href="">
+                                    {item.id}번 {item.title}
+                                </a>
+                                <div class="triangle"></div>
+                            </Card>
+                        )
+                }
+                )}
             </Context>
 
             <Context>
-            <Title><h2><a href="">새로운 글</a></h2></Title>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
-                <Card>
-                    <a href="">21925번 짝수 팰린드롬</a>
-                    <div class="triangle"></div>
-                </Card>
+                <Title><h2><a href="">추가된 영어 문제</a></h2></Title>
+                {engData?.map((item, i) => {
+                    if (i < 7)
+                        return (
+                            <Card>
+                                <a href="">
+                                    {item.id}번 {item.title}
+                                </a>
+                                <div class="triangle"></div>
+                            </Card>
+                        )
+                }
+                )}
             </Context>
-        
+
             <Context>
                 <Title><h2><a href=''>문제 순위</a></h2></Title>
                 {rankdata?.map((item, i) => {
                     if (i < 7)
                         return (
                             <Card>
-                                <a href="" style={{ position: 'absolute', color: '#333', fontSize: '15px', margin: '10px', textDecoration: 'none' }}>
+                                <a href="">
                                     {item.id}번 {item.title}
                                 </a>
-                                <img src={notactive} />
+                                <div class="triangle"></div>
                             </Card>
                         )
                 }
