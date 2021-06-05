@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import {useState, useEffect} from "react";
+import {useHistory} from "react-router-dom";
 import active from "./assets/active.png";
 import notactive from "./assets/notactive.png";
 import styled from "styled-components";
@@ -47,16 +48,17 @@ img{
 `
 
 
-function Header() {
-    const url1 = 'http://localhost:8080/problem/sort/rank';
-    const url2 = 'http://localhost:8080/home1';
-
-    axios.get(url1).then(response=>{
-        console.log(response.data);
-    });
-    axios.get(url2).then(response=>{
-        console.log(response.data);
-    });
+function Container() {
+    //문제 순위
+    const [rankdata, setRankdata] = useState();
+    useEffect(async () => {
+        try{
+            const response=await axios.get(`http://localhost:8080/problem/sort/rank`);
+            setRankdata(response.data); //데이터 저장
+        } catch(e) {
+            console.log("error");
+        }
+    }, []);
 
     return (
         
@@ -94,13 +96,14 @@ function Header() {
 
             <Context>
                 <Title><h2><a href=''>문제 순위</a></h2></Title>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
-                <Card><img src={notactive}/></Card>
+                {rankdata.map((item,i) => 
+                    <Card>
+                        <span style={{position:'absolute', color:'#333', fontSize:'15px', marginTop:'10px',marginLeft:'10px'}}>
+                            {item.id}번 {item.title}
+                        </span>
+                        <img src={notactive}/>
+                    </Card>
+                )}
             </Context>
 
             <Context>
@@ -111,4 +114,4 @@ function Header() {
     
 }
 
-export default Header;
+export default Container;

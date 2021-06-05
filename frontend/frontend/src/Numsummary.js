@@ -16,7 +16,7 @@ function Numsummary() {
     const count2 = useSpring({ from: { val: 0 }, to: { val: 19400 } });
     const count3 = useSpring({ from: { val: 0 }, to: { val: 16188 } });
     const count4 = useSpring({ from: { val: 0 }, to: { val: 75 } });
-
+    
     const style = {
         backgroundColor: '#252525',
         padding: '60px',
