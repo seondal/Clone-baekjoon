@@ -26,14 +26,6 @@ create table problems (
                           primary key (problem_id)
 ) engine=InnoDB;
 
-create table status (
-                        status_no bigint not null auto_increment,
-                        solve_flag bit not null default false,
-                        problem_id bigint not null,
-                        user_id varchar(20) not null,
-                        primary key (status_no)
-) engine=InnoDB;
-
 create table users (
                        user_id varchar(20) not null,
                        create_date datetime(6),
@@ -52,14 +44,4 @@ alter table boards
 alter table boards
     add constraint FK3faq5fnym59tvtcrmikt3mclc
         foreign key (writer)
-            references users (user_id);
-
-alter table status
-    add constraint FKs4ex7d6benl8msdgw32np5617
-        foreign key (problem_id)
-            references problems (problem_id);
-
-alter table status
-    add constraint FK41pnbjmhlw8pvggq86inm7le
-        foreign key (user_id)
             references users (user_id);
