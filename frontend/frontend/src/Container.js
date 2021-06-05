@@ -96,14 +96,14 @@ function Container() {
 
             <Context>
                 <Title><h2><a href=''>문제 순위</a></h2></Title>
-                {rankdata.map((item,i) => 
+                {rankdata.map((item) => (
                     <Card>
-                        <span style={{position:'absolute', color:'#333', fontSize:'15px', marginTop:'10px',marginLeft:'10px'}}>
+                        <a href="" style={{position:'absolute', color:'#333', fontSize:'15px', margin:'10px', textDecoration:'none'}}>
                             {item.id}번 {item.title}
-                        </span>
+                        </a>
                         <img src={notactive}/>
                     </Card>
-                )}
+                ))}
             </Context>
 
             <Context>
