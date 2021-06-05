@@ -96,7 +96,7 @@ function Container() {
 
             <Context>
                 <Title><h2><a href=''>문제 순위</a></h2></Title>
-                {rankdata.map((item) => (
+                {rankdata?.map((item) => (
                     <Card>
                         <a href="" style={{position:'absolute', color:'#333', fontSize:'15px', margin:'10px', textDecoration:'none'}}>
                             {item.id}번 {item.title}
